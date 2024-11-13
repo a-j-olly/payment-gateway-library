@@ -1,0 +1,27 @@
+{
+	"name": "payment-gateway-library",
+	"version": "1.0.0",
+	"description": "This package is the result of a coding challenge to create a payment gateway library.",
+	"main": "index.js",
+	"scripts": {
+		"dev": "ts-node ./script.ts",
+		"test": "vitest run --coverage",
+		"seed": "npx ts-node seed.ts",
+		"watch": "vitest"
+	},
+	"keywords": [],
+	"author": "Aaron Oliver",
+	"license": "ISC",
+	"dependencies": {
+		"@prisma/client": "5.16.1"
+	},
+	"devDependencies": {
+		"@vitest/coverage-v8": "^2.0.5",
+		"@types/node": "20.14.13",
+		"prisma": "5.16.1",
+		"ts-node": "10.9.2",
+		"typescript": "5.5.4",
+		"vitest": "^2.0.4",
+		"vitest-mock-extended": "^2.0.0"
+	}
+}

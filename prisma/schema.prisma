@@ -1,0 +1,23 @@
+model Account {
+    id           String        @id @default(cuid()) @unique
+    balance      Decimal
+    transactions Transaction[]
+}
+
+model Transaction {
+    id        String   @id @default(cuid()) @unique
+    type      String
+    amount    Decimal
+    accountId String
+    account   Account  @relation(fields: [accountId], references: [id])
+    createdAt DateTime @default(now())
+}
+
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+generator client {
+    provider = "prisma-client-js"
+}
